@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    
+    EN:
+    This example shows the XML syntax (using the "ProductFeed" schema)
+    for providing product, category, and brand information to Bazaarvoice.
+
+    © Copyright 2015 Bazaarvoice, Inc.
+
+    Unless required by applicable law or agreed to in writing, the example code
+    below is provided "as is" without warranty of any kind, either express or
+    implied, including without limitation any implied warranties of condition,
+    uninterrupted use, merchantability, or fitness for a particular purpose.
+
+    FR :
+    Cet exemple montre la syntaxe XML ( en utilisant le schéma " ProductFeed " )
+    pour fournir les bons informations à Bazaarvoice dans le bon format.
+
+    © Copyright 2015 Bazaarvoice , Inc.
+
+    Sauf si requis par la loi en vigueur ou accord écrit , l'exemple de code
+    ci-dessous est fourni «tel quel» sans garantie d'aucune sorte, expresse ou implicite, sans restriction, y compris toute garantie implicite de l'état, utilisation ininterrompue, la qualité marchande ou d'adéquation à un usage particulier .
+
+-->
+<Feed xmlns="http://www.bazaarvoice.com/xs/PRR/ProductFeed/5.6" name="ExampleClient" incremental="false" extractDate="2011-10-18T12:00:00.000000">
+
+    <!-- Brands / Marques -->
+    <Brands>
+        <Brand>
+            <ExternalId>AAA</ExternalId>
+            <Name>First Brand</Name>
+        </Brand>
+        <Brand>
+            <ExternalId>BBB</ExternalId>
+            <!-- Default brand name -->
+            <Name>Second Brand</Name>
+            <!-- Localized brand names -->
+            <Names> 
+                <Name locale="en_US">Second Brand US</Name>
+                <Name locale="en_CA">Second Brand CA</Name>
+                <Name locale="fr_CA">Deuxième marque CA</Name>
+            </Names>
+        </Brand>
+    </Brands>
+
+    <!-- Categories / Cetégories -->
+    <Categories>
+        <Category>
+            <ExternalId>1010</ExternalId>
+            <!-- Default category name -->
+            <Name>First Category</Name>
+            <!-- Localized category names -->
+            <Names> 
+                <Name locale="en_US">First Category US</Name>
+                <Name locale="en_CA">First Category CA</Name>
+                <Name locale="fr_CA">Première catégorie CA</Name>
+            </Names>
+            <!-- Default category page URL / URL Page de catégorie par défaut -->
+            <CategoryPageUrl>http://www.example.com/category.htm?cat=1010</CategoryPageUrl>
+            <!-- Localized category page URLs / URL Page de catégorie par locale  -->
+            <CategoryPageUrls>
+                <CategoryPageUrl locale="en_US">http://www.example.com/en_us/category.htm?cat=1010</CategoryPageUrl>
+                <CategoryPageUrl locale="en_CA">http://www.example.ca/en_ca/category.htm?cat=1010</CategoryPageUrl>
+                <CategoryPageUrl locale="fr_CA">http://www.example.ca/fr_ca/category.htm?prod=1010</CategoryPageUrl>
+            </CategoryPageUrls>
+            <!-- Default category image URL / URL Image de catégorie par défaut -->
+            <ImageUrl>http://images.example.com/catimages/1010.gif</ImageUrl>
+            <!-- Localized category image URLs / URL Image de catégorie par locale -->
+            <ImageUrls>
+                <ImageUrl locale="en_US">http://images.example.com/en_us/catimages/1010.gif</ImageUrl>
+                <ImageUrl locale="en_CA">http://images.example.ca/en_ca/catimages/1010.gif</ImageUrl>
+                <ImageUrl locale="fr_CA">http://images.example.ca/fr_ca/catimages/1010.gif</ImageUrl>
+            </ImageUrls>
+        </Category>
+    </Categories>
+
+    <!-- Products -->
+
+    <Products>
+        <Product>
+            <ExternalId>333</ExternalId>
+            <!-- Default product name / Nom de produit par défaut -->
+            <Name>Third Product Square and Red</Name>
+            <!-- Localized product names / Nom de produit par locale -->
+            <Names> 
+                <Name locale="en_US">Third Product US</Name>
+                <Name locale="en_CA">Third Product CA</Name>
+                <Name locale="fr_CA">Troisième produit CA</Name>
+            </Names>
+            <!-- Default product description / Description du produit par défaut -->
+            <Description>Third Product Description Text</Description>
+            <!-- Localized product descriptions / Description du produit par locale-->
+            <Descriptions>
+                <Description locale="en_US">Third Product Description Text US</Description>
+                <Description locale="en_CA">Third Product Description Text CA</Description>
+                <Description locale="fr_CA">Troisième texte Description du produit</Description>
+            </Descriptions>
+            <BrandExternalId>BBB</BrandExternalId>
+            <CategoryExternalId>1021</CategoryExternalId>
+            <!-- Default product page URL / URL Page de produit par defaut -->
+            <ProductPageUrl>http://www.example.com/product.htm?prod=2000003</ProductPageUrl>
+            <!-- Localized product page URLs / URL page de produit par locale -->
+            <ProductPageUrls>
+                <ProductPageUrl locale="en_US">http://www.example.com/en_us/product.htm?prod=2000003</ProductPageUrl>
+                <ProductPageUrl locale="en_CA">http://www.example.ca/en_ca/product.htm?prod=2000003</ProductPageUrl>
+                <ProductPageUrl locale="fr_CA">http://www.example.ca/fr_ca/product.htm?prod=2000003</ProductPageUrl>
+            </ProductPageUrls>
+            <!-- Default product image URL / URL image de produit par defaut -->
+            <ImageUrl>http://images.example.com/prodimages/2000003.gif</ImageUrl>
+            <!-- Localized product image URLs / URL image de produit par locale-->
+            <ImageUrls>
+                <ImageUrl locale="en_US">http://images.example.com/en_us/prodimages/2000003.gif</ImageUrl>
+                <ImageUrl locale="en_CA">http://images.example.ca/en_ca/prodimages/2000003.gif</ImageUrl>
+                <ImageUrl locale="fr_CA">http://images.example.ca/fr_ca/prodimages/2000003.gif</ImageUrl>
+            </ImageUrls>
+            <ModelNumbers>
+                <ModelNumber>123523832</ModelNumber>
+                <ModelNumber>123325839</ModelNumber>
+            </ModelNumbers>
+            <ManufacturerPartNumbers>
+                <ManufacturerPartNumber>26-93812-8W</ManufacturerPartNumber>
+            </ManufacturerPartNumbers>
+            <EANs>
+                <EAN>0813354723287</EAN>
+            </EANs>
+            <UPCs>
+                <UPC>138313830999</UPC>
+            </UPCs>
+            <!-- Custom product attributes / Autres attributs -->
+            <Attributes>
+                <!-- Families this product is a member of / Ce produit fait partie de cette famille -->
+                <Attribute id="BV_FE_FAMILY">
+                    <Value>Red</Value>
+                </Attribute>
+                <Attribute id="BV_FE_FAMILY">
+                    <Value>Square</Value>
+                </Attribute>
+                <!-- Show all content from other products in the Red Family / Afficher tout contenu pour la famille "Red" -->
+                <Attribute id="BV_FE_EXPAND">
+                    <Value>BV_FE_FAMILY:Red</Value>
+                </Attribute>
+                <!-- Show all content from other products in the Square Family  / Afficher tout contenu pour la famille "Square"-->
+                <Attribute id="BV_FE_EXPAND">
+                    <Value>BV_FE_FAMILY:Square</Value>
+                </Attribute>
+            </Attributes>
+        </Product>
+    </Products>
+</Feed>
