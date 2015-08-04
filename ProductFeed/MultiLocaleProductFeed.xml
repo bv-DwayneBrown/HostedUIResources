@@ -27,18 +27,15 @@
     <!-- Brands / Marques -->
     <Brands>
         <Brand>
-            <ExternalId>AAA</ExternalId>
-            <Name>First Brand</Name>
-        </Brand>
-        <Brand>
             <ExternalId>BBB</ExternalId>
             <!-- Default brand name -->
-            <Name>Second Brand</Name>
+            <Name>Brand</Name>
             <!-- Localized brand names -->
             <Names> 
-                <Name locale="en_US">Second Brand US</Name>
-                <Name locale="en_CA">Second Brand CA</Name>
-                <Name locale="fr_CA">Deuxième marque CA</Name>
+                <Name locale="en_US">Brand US</Name>
+                <Name locale="en_CA">Brand CA</Name>
+                <Name locale="fr_CA">Marque CA</Name>
+                <Name locale="fr_FR">Marque FR</Name>
             </Names>
         </Brand>
     </Brands>
