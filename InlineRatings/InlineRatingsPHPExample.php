@@ -1,7 +1,7 @@
 <?php
   /*
   *  This code is provided for demonstration purposes only and is not intended for copy and paste integrations.
-  *  Ce code ne sert qu'à des fins de démonstration et ne devrait pas être integré en copier-coller.
+  *  Ce code ne sert qu'à des fins de démonstration et ne devrait pas être integré en copiant-collant.
   */
 
 echo "Inline Ratings with basic PHP";
