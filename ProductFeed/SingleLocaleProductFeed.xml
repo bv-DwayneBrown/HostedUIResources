@@ -52,8 +52,11 @@
             <CategoryPageUrl>http://www.example.com/category.htm?cat=1020</CategoryPageUrl>
             <ImageUrl>http://images.example.com/catimages/1020.gif</ImageUrl>
         </Category>
+        
+        <!-- Define a sub category | Definir une sous-catégorie -->
         <Category>
             <ExternalId>1021</ExternalId>
+            <!-- This field must correspond with another category in the feed |La balise ParentExternalId doit faire correspondre avec une catégorie dans le flux -->
             <ParentExternalId>1020</ParentExternalId>
             <Name>Sub Category</Name>
             <CategoryPageUrl>http://www.example.com/category.htm?cat=1021</CategoryPageUrl>
