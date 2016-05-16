@@ -46,6 +46,19 @@
             <!-- Default category image URL / URL Image de catégorie par défaut -->
             <ImageUrl>http://images.example.com/catimages/1010.gif</ImageUrl>
         </Category>
+         <Category>
+            <ExternalId>1020</ExternalId>
+            <Name>Second Category</Name>
+            <CategoryPageUrl>http://www.example.com/category.htm?cat=1020</CategoryPageUrl>
+            <ImageUrl>http://images.example.com/catimages/1020.gif</ImageUrl>
+        </Category>
+        <Category>
+            <ExternalId>1021</ExternalId>
+            <ParentExternalId>1020</ParentExternalId>
+            <Name>Sub Category</Name>
+            <CategoryPageUrl>http://www.example.com/category.htm?cat=1021</CategoryPageUrl>
+            <ImageUrl>http://images.example.com/catimages/1021.gif</ImageUrl>
+        </Category>
     </Categories>
 
     <!-- Products -->
